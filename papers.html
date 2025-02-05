@@ -182,6 +182,16 @@
         .publication-link a:hover {
             text-decoration: underline;
         }
+
+        @media (max-width: 768px) {
+            .publications-filter {
+                flex-direction: column;
+            }
+            
+            .search-box {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -248,7 +258,32 @@
                 </div>
             </div>
 
-            <!-- 继续添加更多论文... -->
+            <div class="publication-card" data-categories="journal">
+                <div class="publication-title">
+                    Transformers in 3D Point Clouds: A Survey
+                </div>
+                <div class="publication-authors">
+                    Dening Lu, Qian Xie, <span class="author-highlight">Mingqiang Wei</span>, Linlin Xu, Jonathan Li
+                </div>
+                <div class="publication-venue">IEEE TPAMI (under review), 2022</div>
+                <div class="publication-link">
+                    <a href="https://arxiv.org/abs/2205.07417" target="_blank">https://arxiv.org/abs/2205.07417</a>
+                </div>
+            </div>
+
+            <div class="publication-card" data-categories="journal">
+                <div class="publication-title">
+                    Semi-drdnet semi-supervised detail-recovery image deraining network via unpaired contrastive learning
+                </div>
+                <div class="publication-authors">
+                    Yiyang Shen, Sen Deng, Wenhan Yang, <span class="author-highlight">Mingqiang Wei</span>, 
+                    Haoran Xie, Xiaoping Zhang, Jing Qin, Meng Wang
+                </div>
+                <div class="publication-venue">IEEE TPAMI (under review), 2022</div>
+                <div class="publication-link">
+                    <a href="https://arxiv.org/abs/2204.02772" target="_blank">https://arxiv.org/abs/2204.02772</a>
+                </div>
+            </div>
         </div>
     </div>
 
