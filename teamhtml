@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>团队介绍 - 魏明强教授课题组</title>
+    <style>
+        :root {
+            --primary-color: #1e40af;
+            --secondary-color: #3b82f6;
+            --background-color: #f0f9ff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, var(--background-color) 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #dbeafe;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .page-title {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .member-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .member-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--secondary-color);
+        }
+
+        .member-info {
+            padding: 1.5rem;
+        }
+
+        .member-name {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-title {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .member-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .member-contact {
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .member-contact p {
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .research-interests {
+            margin-top: 1rem;
+        }
+
+        .research-tag {
+            display: inline-block;
+            background: var(--background-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            margin: 0.2rem;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">个人简介</a>
+                <a href="courses.html">主讲课程</a>
+                <a href="publications.html">学术论文</a>
+                <a href="awards.html">科研成果</a>
+                <a href="projects.html">项目</a>
+                <a href="join.html">加入我们</a>
+                <a href="team.html">团队介绍</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <h1 class="page-title">团队成员</h1>
+
+        <div class="team-grid">
+            <!-- 团队带头人 -->
+            <div class="member-card">
+                <img src="images/weimingqiang.jpg" alt="魏明强教授" class="member-image">
+                <div class="member-info">
+                    <div class="member-name">魏明强</div>
+                    <div class="member-title">教授，博士生导师</div>
+                    <div class="member-description">
+                        太原理工大学人工智能学院院长，IEEE高级会员，ACM会员。主要研究方向为人工智能、计算机图形学、计算机视觉等。
+                    </div>
+                    <div class="research-interests">
+                        <span class="research-tag">深度学习</span>
+                        <span class="research-tag">计算机视觉</span>
+                        <span class="research-tag">3D视觉</span>
+                        <span class="research-tag">图形学</span>
+                    </div>
+                    <div class="member-contact">
+                        <p>📧 Email: mqwei@nuaa.edu.cn</p>
+                        <p>🏢 办公室: 计算机学院实验楼106A</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 其他教师成员模板 -->
+            <div class="member-card">
+                <img src="images/teacher1.jpg" alt="教师姓名" class="member-image">
+                <div class="member-info">
+                    <div class="member-name">教师姓名</div>
+                    <div class="member-title">职称</div>
+                    <div class="member-description">
+                        个人简介和研究领域描述...
+                    </div>
+                    <div class="research-interests">
+                        <span class="research-tag">研究方向1</span>
+                        <span class="research-tag">研究方向2</span>
+                    </div>
+                    <div class="member-contact">
+                        <p>📧 Email: example@tyut.edu.cn</p>
+                        <p>🏢 办公室: 位置信息</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 可以继续添加更多教师信息 -->
+        </div>
+    </div>
+</body>
+</html>
