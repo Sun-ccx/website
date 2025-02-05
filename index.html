@@ -76,10 +76,39 @@
             margin-bottom: 1rem;
         }
 
-        .profile-info p {
-            line-height: 1.6;
+        .profile-intro {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
             color: #444;
-            margin-bottom: 1rem;
+        }
+
+        .info-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .info-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .info-section p {
+            margin: 0.5rem 0;
+            color: #444;
+        }
+
+        .research-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: var(--background-color);
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
         }
 
         .section {
@@ -170,9 +199,30 @@
             <img src="images.jpg" alt="魏明强教授" class="profile-image">
             <div class="profile-info">
                 <h1>魏明强 教授</h1>
-                <p>太原理工大学人工智能学院院长，IEEE高级会员，ACM会员。主要研究方向为人工智能、计算机图形学、计算机视觉等。</p>
-                <p>Email: mqwei@nuaa.edu.cn</p>
-                <p>办公室: 计算机学院实验楼106A</p>
+                <p class="profile-intro">太原理工大学人工智能学院院长，IEEE高级会员，ACM会员。</p>
+                
+                <div class="info-section">
+                    <h3>教育背景</h3>
+                    <p>毕业院校：香港中文大学</p>
+                    <p>学历：工学博士学位</p>
+                </div>
+                
+                <div class="info-section">
+                    <h3>研究方向</h3>
+                    <div class="research-tags">
+                        <span class="tag">人工智能</span>
+                        <span class="tag">计算机图形学</span>
+                        <span class="tag">计算机视觉</span>
+                        <span class="tag">大模型技术</span>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>联系方式</h3>
+                    <p>所在单位：太原理工大学人工智能学院</p>
+                    <p>办公室：计算机学院实验楼106A</p>
+                    <p>Email：mqwei@nuaa.edu.cn / mingqiang.wei@gmail.com</p>
+                </div>
             </div>
         </div>
 
