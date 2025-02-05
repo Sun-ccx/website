@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科研成果获奖及专利 - 魏明强教授</title>
+    <style>
+        :root {
+            --primary-color: #1e40af;
+            --secondary-color: #3b82f6;
+            --background-color: #f0f9ff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, var(--background-color) 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #dbeafe;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .page-title {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .awards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .award-section {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .awards-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .award-item {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: var(--background-color);
+            border-radius: 4px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .award-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .award-year {
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">个人简介</a>
+                <a href="courses.html">主讲课程</a>
+                <a href="publications.html">学术论文</a>
+                <a href="awards.html">科研成果</a>
+                <a href="projects.html">项目</a>
+                <a href="join.html">Join Us</a>
+                <a href="team.html">团队介绍</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <h1 class="page-title">科研成果获奖及专利</h1>
+        
+        <div class="awards-container">
+            <div class="award-section">
+                <h2 class="section-title">学术奖项</h2>
+                <ul class="awards-list">
+                    <li class="award-item">
+                        <span class="award-year">2014</span>
+                        香港中文大学青年学者最佳博士毕业论文奖
+                    </li>
+                    <li class="award-item">
+                        <span class="award-year">2015</span>
+                        南京"321"计划
+                    </li>
+                    <li class="award-item">
+                        <span class="award-year">2014</span>
+                        国科杯"我要创业"大赛一等奖
+                    </li>
+                    <li class="award-item">
+                        <span class="award-year">2020</span>
+                        南京航空航天大学"青年学者"创新奖
+                    </li>
+                    <li class="award-item">
+                        <span class="award-year">2020</span>
+                        中国机器人大赛3D视觉大赛一等奖（指导教师）
+                    </li>
+                    <li class="award-item">
+                        <span class="award-year">2019</span>
+                        南航本科学学术论文一等奖（江苏省二等奖）、二等奖（指导教师）
+                    </li>
+                </ul>
+            </div>
+
+            <div class="award-section">
+                <h2 class="section-title">学术职务</h2>
+                <ul class="awards-list">
+                    <li class="award-item">脑机智能技术教育部重点实验室副主任</li>
+                    <li class="award-item">江苏省智能制造工程学会常务理事</li>
+                    <li class="award-item">山西省计算机学会理事</li>
+                    <li class="award-item">IEEE Senior Member</li>
+                </ul>
+            </div>
+
+            <div class="award-section">
+                <h2 class="section-title">期刊编委</h2>
+                <ul class="awards-list">
+                    <li class="award-item">ACM TOMM 编委（Associate Editor）</li>
+                    <li class="award-item">The Visual Computer 编委（Associate Editor）</li>
+                    <li class="award-item">IEEE TMM 客座主编（2021-2024）</li>
+                    <li class="award-item">计算机辅助设计与图形学学报编委</li>
+                </ul>
+            </div>
+
+            <div class="award-section">
+                <h2 class="section-title">学术服务</h2>
+                <ul class="awards-list">
+                    <li class="award-item">
+                        CVPR/ICCV/ECCV/AAAI/IJAL/ACM MM等CCF A/B类国际会议程序委员会委员
+                    </li>
+                    <li class="award-item">
+                        第14届中国计算机图形学大会最佳论文奖(Best paper award)
+                    </li>
+                    <li class="award-item">
+                        江苏省计算机学会计算机学会青年科技奖
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
