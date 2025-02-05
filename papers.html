@@ -5,7 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学术论文 - 魏明强教授</title>
     <style>
-        /* ... 保持原有的基础样式 ... */
+        :root {
+            --primary-color: #1e40af;
+            --secondary-color: #3b82f6;
+            --background-color: #f0f9ff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, var(--background-color) 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #dbeafe;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .page-title {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
 
         .publications-filter {
             margin-bottom: 2rem;
@@ -41,12 +99,32 @@
             background: var(--secondary-color);
         }
 
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
         .year-label {
-            font-size: 1.2rem;
             color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: bold;
             margin: 2rem 0 1rem;
             padding-bottom: 0.5rem;
             border-bottom: 1px solid var(--secondary-color);
+        }
+
+        .publication-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .publication-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .publication-number {
@@ -55,30 +133,68 @@
             margin-right: 0.5rem;
         }
 
-        .publication-card {
-            position: relative;
+        .publication-title {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-authors {
+            margin: 0.5rem 0;
+            color: #666;
+        }
+
+        .publication-venue {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .highlight {
+            color: var(--primary-color);
+            font-weight: bold;
         }
 
         .publication-meta {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
             display: flex;
             gap: 0.5rem;
+            margin-top: 0.5rem;
         }
 
         .publication-tag {
-            background-color: var(--background-color);
+            background: var(--background-color);
             padding: 0.2rem 0.5rem;
             border-radius: 4px;
             font-size: 0.8rem;
-            white-space: nowrap;
+        }
+
+        .publication-link {
+            margin-top: 0.5rem;
+        }
+
+        .publication-link a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .publication-link a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <nav class="navbar">
-        <!-- ... 保持原有的导航栏 ... -->
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">个人简介</a>
+                <a href="courses.html">主讲课程</a>
+                <a href="publications.html">学术论文</a>
+                <a href="awards.html">科研成果</a>
+                <a href="projects.html">项目</a>
+                <a href="join.html">加入我们</a>
+                <a href="team.html">团队介绍</a>
+            </div>
+        </div>
     </nav>
 
     <div class="main-content">
@@ -94,10 +210,8 @@
         </div>
 
         <div class="publications-list">
-            <!-- 2022年论文 -->
             <div class="year-label">2022</div>
-            <!-- 这里开始插入2022年的论文，每篇论文使用以下格式 -->
-            <div class="publication-card" data-categories="CCF-A">
+            <div class="publication-card" data-categories="CCF-A conference">
                 <span class="publication-number">[1]</span>
                 <div class="publication-title">
                     I can find you! Boundary-guided Separated Attention Network for Camouflaged Object Detection
@@ -112,12 +226,30 @@
                 </div>
             </div>
 
-            <!-- 继续添加其他论文... -->
+            <div class="publication-card" data-categories="CCF-A journal">
+                <span class="publication-number">[2]</span>
+                <div class="publication-title">
+                    AGConv: Adaptive graph convolution on 3d point clouds
+                </div>
+                <div class="publication-authors">
+                    <span class="highlight">Mingqiang Wei</span>, Zeyong Wei, Haoran Zhou, Fei Hu, Huajian Si, 
+                    Zhilei Chen, Zhe Zhu, Jingbo Qiu, Xuefeng Yan, Yanwen Guo, Jun Wang, Jing Qin
+                </div>
+                <div class="publication-venue">IEEE TPAMI (major revision), 2022</div>
+                <div class="publication-link">
+                    <a href="https://arxiv.org/abs/2206.04665" target="_blank">https://arxiv.org/abs/2206.04665</a>
+                </div>
+                <div class="publication-meta">
+                    <span class="publication-tag">CCF A</span>
+                    <span class="publication-tag">IF=24</span>
+                </div>
+            </div>
+
+            <!-- 继续添加更多论文... -->
         </div>
     </div>
 
     <script>
-        // 搜索和过滤功能
         const searchInput = document.getElementById('searchInput');
         const filterButtons = document.querySelectorAll('.filter-button');
         const publications = document.querySelectorAll('.publication-card');
@@ -146,7 +278,5 @@
             });
         }
     </script>
-</body>
-</html>
 </body>
 </html>
