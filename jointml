@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us - 魏明强教授课题组</title>
+    <style>
+        :root {
+            --primary-color: #1e40af;
+            --secondary-color: #3b82f6;
+            --background-color: #f0f9ff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, var(--background-color) 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #dbeafe;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .page-title {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .join-section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .requirements {
+            background: var(--background-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .research-directions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .direction-item {
+            background: var(--background-color);
+            padding: 1rem;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .direction-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .programs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .program-card {
+            background: var(--background-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .highlight {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .english-text {
+            color: #666;
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">个人简介</a>
+                <a href="courses.html">主讲课程</a>
+                <a href="publications.html">学术论文</a>
+                <a href="awards.html">科研成果</a>
+                <a href="projects.html">项目</a>
+                <a href="join.html">Join Us</a>
+                <a href="team.html">团队介绍</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <h1 class="page-title">加入我们</h1>
+
+        <div class="join-section">
+            <h2 class="section-title">招收硕士/博士研究生</h2>
+            <div class="requirements">
+                <p>欢迎校内外本科生（尤其推免生，英语四级成绩≥550分或六级成绩≥520分）/硕士研究生报考我的硕士研究生/博士研究生职位，并有若干博士后职位。</p>
+            </div>
+
+            <h3>研究方向：</h3>
+            <div class="research-directions">
+                <div class="direction-item">深度学习</div>
+                <div class="direction-item">跨模态多媒体数据处理（第五代多媒体处理技术）</div>
+                <div class="direction-item">3D 视觉</div>
+                <div class="direction-item">3D AIGC</div>
+                <div class="direction-item">计算机视觉</div>
+                <div class="direction-item">计算机图形学</div>
+                <div class="direction-item">几何深度学习</div>
+                <div class="direction-item">图形与图像处理</div>
+                <div class="direction-item">大型飞机外形三维测量与几何处理</div>
+                <div class="direction-item">大模型技术</div>
+            </div>
+            <div class="english-text">
+                Deep Learning, Cross-modal Multimedia Processing, 3D Vision, Geometric Deep Learning, Graphics and Image Processing
+            </div>
+
+            <div class="programs">
+                <div class="program-card">
+                    <h3>计算机科学与技术</h3>
+                    <p>【招收博士、硕士研究生】</p>
+                    <p>计算机科学与技术学院</p>
+                </div>
+                <div class="program-card">
+                    <h3>软件工程</h3>
+                    <p>【招收硕士研究生】</p>
+                    <p>计算机科学与技术学院</p>
+                </div>
+                <div class="program-card">
+                    <h3>电子信息</h3>
+                    <p>【招收博士、硕士研究生】</p>
+                    <p>计算机科学与技术学院</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="join-section">
+            <h2 class="section-title">招收青年教师</h2>
+            <h3>研究方向：</h3>
+            <div class="research-directions">
+                <div class="direction-item">智能医学信息处理</div>
+                <div class="direction-item">人工智能基础理论研究</div>
+                <div class="direction-item">可解释人工智能</div>
+                <div class="direction-item">智能图形学</div>
+                <div class="direction-item">空间感知与空间智能</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
