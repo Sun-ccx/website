@@ -75,20 +75,21 @@
         .search-box {
             flex: 1;
             min-width: 300px;
-            padding: 0.5rem;
+            padding: 0.8rem;
             border: 1px solid var(--secondary-color);
             border-radius: 4px;
             font-size: 1rem;
         }
 
         .filter-button {
-            padding: 0.5rem 1rem;
+            padding: 0.8rem 1.5rem;
             background: var(--primary-color);
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             transition: background 0.3s;
+            font-size: 0.9rem;
         }
 
         .filter-button:hover {
@@ -99,16 +100,13 @@
             background: var(--secondary-color);
         }
 
-        .publications-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
+        .year-section {
+            margin-bottom: 3rem;
         }
 
         .year-label {
             color: var(--primary-color);
             font-size: 1.5rem;
-            font-weight: bold;
             margin: 2rem 0 1rem;
             padding-bottom: 0.5rem;
             border-bottom: 1px solid var(--secondary-color);
@@ -116,15 +114,16 @@
 
         .publication-card {
             background: white;
-            border-radius: 8px;
             padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
 
         .publication-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: translateX(10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
 
         .publication-number {
@@ -134,47 +133,50 @@
         }
 
         .publication-title {
-            color: var(--primary-color);
-            font-size: 1.1rem;
             font-weight: bold;
-            margin-bottom: 0.5rem;
+            color: #333;
+            margin-bottom: 0.8rem;
         }
 
         .publication-authors {
-            margin: 0.5rem 0;
             color: #666;
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
         }
 
-        .publication-venue {
-            color: var(--secondary-color);
-            font-weight: 500;
-        }
-
-        .highlight {
+        .author-highlight {
             color: var(--primary-color);
             font-weight: bold;
         }
 
-        .publication-meta {
+        .publication-venue {
+            color: #444;
+            font-style: italic;
+        }
+
+        .publication-tags {
+            margin-top: 0.8rem;
             display: flex;
             gap: 0.5rem;
-            margin-top: 0.5rem;
+            flex-wrap: wrap;
         }
 
         .publication-tag {
             background: var(--background-color);
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
             font-size: 0.8rem;
         }
 
         .publication-link {
-            margin-top: 0.5rem;
+            margin-top: 0.8rem;
         }
 
         .publication-link a {
             color: var(--secondary-color);
             text-decoration: none;
+            font-size: 0.9rem;
         }
 
         .publication-link a:hover {
@@ -209,8 +211,9 @@
             <button class="filter-button" data-filter="conference">会议论文</button>
         </div>
 
-        <div class="publications-list">
+        <div class="year-section">
             <div class="year-label">2022</div>
+            
             <div class="publication-card" data-categories="CCF-A conference">
                 <span class="publication-number">[1]</span>
                 <div class="publication-title">
@@ -218,10 +221,10 @@
                 </div>
                 <div class="publication-authors">
                     Hongwei Zhu（本科生）, Peng Li, Haoran Xie, Xuefeng Yan, Dong Liang, Dapeng Chen, 
-                    <span class="highlight">Mingqiang Wei</span>, Jing Qin
+                    <span class="author-highlight">Mingqiang Wei</span>, Jing Qin
                 </div>
                 <div class="publication-venue">AAAI 2022</div>
-                <div class="publication-meta">
+                <div class="publication-tags">
                     <span class="publication-tag">CCF A</span>
                 </div>
             </div>
@@ -232,14 +235,14 @@
                     AGConv: Adaptive graph convolution on 3d point clouds
                 </div>
                 <div class="publication-authors">
-                    <span class="highlight">Mingqiang Wei</span>, Zeyong Wei, Haoran Zhou, Fei Hu, Huajian Si, 
+                    <span class="author-highlight">Mingqiang Wei</span>, Zeyong Wei, Haoran Zhou, Fei Hu, Huajian Si, 
                     Zhilei Chen, Zhe Zhu, Jingbo Qiu, Xuefeng Yan, Yanwen Guo, Jun Wang, Jing Qin
                 </div>
                 <div class="publication-venue">IEEE TPAMI (major revision), 2022</div>
                 <div class="publication-link">
                     <a href="https://arxiv.org/abs/2206.04665" target="_blank">https://arxiv.org/abs/2206.04665</a>
                 </div>
-                <div class="publication-meta">
+                <div class="publication-tags">
                     <span class="publication-tag">CCF A</span>
                     <span class="publication-tag">IF=24</span>
                 </div>
