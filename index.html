@@ -3,106 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>梁林 - 中山大学</title>
+    <title>魏明强教授 - 太原理工大学</title>
     <style>
+        :root {
+            --primary-color: #1e40af;
+            --secondary-color: #3b82f6;
+            --background-color: #f0f9ff;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, var(--background-color) 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-        }
-        
-        .header {
             display: flex;
-            gap: 30px;
-            margin-bottom: 30px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
         }
-        
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #dbeafe;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .profile-section {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
         .profile-image {
-            width: 200px;
-            height: auto;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
-        .contact-info {
-            flex: 1;
+
+        .profile-info h1 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
         }
-        
-        h1 {
-            margin-top: 0;
-            color: #333;
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.5rem 2rem;
         }
-        
-        .section {
-            margin-bottom: 30px;
+
+        .info-label {
+            font-weight: bold;
+            color: var(--primary-color);
         }
-        
-        h2 {
-            color: #2c5282;
-            border-bottom: 2px solid #2c5282;
-            padding-bottom: 5px;
+
+        .achievements {
+            margin-top: 2rem;
         }
-        
-        ul {
+
+        .achievements h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .achievement-list {
             list-style-type: none;
             padding-left: 0;
         }
-        
-        li {
-            margin-bottom: 10px;
-        }
-        
-        .publication {
-            margin-bottom: 15px;
+
+        .achievement-list li {
+            margin-bottom: 1rem;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <img src="profile-image.jpg" alt="梁林教授" class="profile-image">
-        <div class="contact-info">
-            <h1>梁林</h1>
-            <p>教授</p>
-            <p>中山大学人机交互与认知工程实验室</p>
-            <p>电子邮件：lianglin@mail.sysu.edu.cn</p>
-            <p>办公室：中山大学东校区实验楼</p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">个人简介</a>
+                <a href="courses.html">主讲课程</a>
+                <a href="publications.html">学术论文</a>
+                <a href="awards.html">科研成果</a>
+                <a href="projects.html">项目</a>
+                <a href="join.html">Join Us</a>
+                <a href="team.html">团队介绍</a>
+            </div>
         </div>
-    </div>
+    </nav>
 
-    <div class="section">
-        <h2>研究方向</h2>
-        <ul>
-            <li>人机交互</li>
-            <li>认知工程</li>
-            <li>用户体验设计</li>
-            <li>人工智能交互</li>
-        </ul>
-    </div>
+    <div class="main-content">
+        <div class="profile-section">
+            <div class="profile-image-container">
+                <img src="profile.jpg" alt="魏明强教授" class="profile-image">
+            </div>
+            <div class="profile-info">
+                <h1>魏明强</h1>
+                <div class="info-grid">
+                    <span class="info-label">职称：</span><span>教授</span>
+                    <span class="info-label">职务：</span><span>院长</span>
+                    <span class="info-label">导师类型：</span><span>博士生导师</span>
+                    <span class="info-label">毕业院校：</span><span>香港中文大学</span>
+                    <span class="info-label">学位：</span><span>工学博士学位</span>
+                    <span class="info-label">所在单位：</span><span>太原理工大学人工智能学院</span>
+                    <span class="info-label">办公地点：</span><span>将军路校区计算机学院实验楼106A</span>
+                    <span class="info-label">电子邮箱：</span><span>mqwei@nuaa.edu.cn / mingqiang.wei@gmail.com</span>
+                </div>
 
-    <div class="section">
-        <h2>教育背景</h2>
-        <ul>
-            <li>博士学位，计算机科学与技术，中山大学</li>
-            <li>硕士学位，计算机科学与技术，中山大学</li>
-            <li>学士学位，计算机科学与技术，中山大学</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>代表性论文</h2>
-        <div class="publication">
-            <p>这里列出论文引用格式...</p>
+                <div class="achievements">
+                    <h2>学术成就</h2>
+                    <ul class="achievement-list">
+                        <li>国家级青年人才（2023）、江苏省双创博士（2018）、南航长空学者（2020）</li>
+                        <li>ACM TOMM、The Visual Computer、Journal of Electronic Imaging、《计算机辅助设计与图形学学报》等期刊编委（AE）</li>
+                        <li>Senior Member, IEEE</li>
+                        <li>江苏省智能制造工程学会常务理事、江苏省工程师学会虚拟现实与元宇宙专委会副主任</li>
+                        <li>CVPR/ICCV/ECCV/AAAI/IJCAI/ACM MM 等CCF A/B类国际会议程序委员会委员</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="section">
-        <h2>教学课程</h2>
-        <ul>
-            <li>人机交互导论</li>
-            <li>用户体验设计</li>
-            <li>认知工程基础</li>
-        </ul>
     </div>
 </body>
 </html>
