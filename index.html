@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>魏明强教授 - 太原理工大学</title>
+    <title>魏明强教授个人主页</title>
     <style>
         :root {
             --primary-color: #1e40af;
@@ -62,12 +62,12 @@
             display: grid;
             grid-template-columns: 300px 1fr;
             gap: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
 
         .profile-image {
             width: 100%;
-            border-radius: 8px;
+            border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
@@ -76,35 +76,77 @@
             margin-bottom: 1rem;
         }
 
-        .info-grid {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            gap: 0.5rem 2rem;
-        }
-
-        .info-label {
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        .achievements {
-            margin-top: 2rem;
-        }
-
-        .achievements h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 0.5rem;
-        }
-
-        .achievement-list {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        .achievement-list li {
-            margin-bottom: 1rem;
+        .profile-info p {
             line-height: 1.6;
+            color: #444;
+            margin-bottom: 1rem;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .view-more {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--secondary-color);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .view-more:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .preview-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .preview-item {
+            padding: 1rem;
+            border-radius: 8px;
+            background: var(--background-color);
+            transition: transform 0.3s ease;
+        }
+
+        .preview-item:hover {
+            transform: translateX(10px);
+        }
+
+        .highlight {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .profile-section {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-image {
+                max-width: 300px;
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
@@ -117,7 +159,7 @@
                 <a href="publications.html">学术论文</a>
                 <a href="awards.html">科研成果</a>
                 <a href="projects.html">项目</a>
-                <a href="join.html">Join Us</a>
+                <a href="join.html">加入我们</a>
                 <a href="team.html">团队介绍</a>
             </div>
         </div>
@@ -125,31 +167,56 @@
 
     <div class="main-content">
         <div class="profile-section">
-            <div class="profile-image-container">
-                <img src="images.jpg" alt="魏明强教授" class="profile-image">
-            </div>
+            <img src="images.jpg" alt="魏明强教授" class="profile-image">
             <div class="profile-info">
-                <h1>魏明强</h1>
-                <div class="info-grid">
-                    <span class="info-label">职称：</span><span>教授</span>
-                    <span class="info-label">职务：</span><span>院长</span>
-                    <span class="info-label">导师类型：</span><span>博士生导师</span>
-                    <span class="info-label">毕业院校：</span><span>香港中文大学</span>
-                    <span class="info-label">学位：</span><span>工学博士学位</span>
-                    <span class="info-label">所在单位：</span><span>太原理工大学人工智能学院</span>
-                    <span class="info-label">办公地点：</span><span>将军路校区计算机学院实验楼106A</span>
-                    <span class="info-label">电子邮箱：</span><span>mqwei@nuaa.edu.cn / mingqiang.wei@gmail.com</span>
-                </div>
+                <h1>魏明强 教授</h1>
+                <p>太原理工大学人工智能学院院长，IEEE高级会员，ACM会员。主要研究方向为人工智能、计算机图形学、计算机视觉等。</p>
+                <p>Email: mqwei@nuaa.edu.cn</p>
+                <p>办公室: 计算机学院实验楼106A</p>
+            </div>
+        </div>
 
-                <div class="achievements">
-                    <h2>学术成就</h2>
-                    <ul class="achievement-list">
-                        <li>国家级青年人才（2023）、江苏省双创博士（2018）、南航长空学者（2020）</li>
-                        <li>ACM TOMM、The Visual Computer、Journal of Electronic Imaging、《计算机辅助设计与图形学学报》等期刊编委（AE）</li>
-                        <li>Senior Member, IEEE</li>
-                        <li>江苏省智能制造工程学会常务理事、江苏省工程师学会虚拟现实与元宇宙专委会副主任</li>
-                        <li>CVPR/ICCV/ECCV/AAAI/IJCAI/ACM MM 等CCF A/B类国际会议程序委员会委员</li>
-                    </ul>
+        <div class="section">
+            <div class="section-title">
+                最新论文
+                <a href="publications.html" class="view-more">查看更多</a>
+            </div>
+            <div class="preview-list">
+                <div class="preview-item">
+                    I can find you! Boundary-guided Separated Attention Network for Camouflaged Object Detection (AAAI 2022)
+                </div>
+                <div class="preview-item">
+                    AGConv: Adaptive graph convolution on 3d point clouds (IEEE TPAMI 2022)
+                </div>
+                <div class="preview-item">
+                    Transformers in 3D Point Clouds: A Survey (IEEE TPAMI 2022)
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                重要荣誉
+                <a href="awards.html" class="view-more">查看更多</a>
+            </div>
+            <div class="preview-list">
+                <div class="preview-item">2014年香港中文大学青年学者最佳博士毕业论文奖</div>
+                <div class="preview-item">2020年南京航空航天大学"青年学者"创新奖</div>
+                <div class="preview-item">第14届中国计算机图形学大会最佳论文奖</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                在研项目
+                <a href="projects.html" class="view-more">查看更多</a>
+            </div>
+            <div class="preview-list">
+                <div class="preview-item">
+                    国家自然科学基金重点项目：面向3D对象分析与生成的深度学习理论与方法
+                </div>
+                <div class="preview-item">
+                    国家自然科学基金面上项目：面向大型飞机外形分析的大规模点云几何深度学习问题研究
                 </div>
             </div>
         </div>
