@@ -209,6 +209,82 @@
                 padding-bottom: 56.25%; /* 在移动端使用16:9的宽高比 */
             }
         }
+
+        /* 投递简历板块样式 */
+        .resume-submission {
+            background: var(--background-color);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .submission-intro {
+            color: #444;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .requirements-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .requirement-item {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            padding: 0.5rem 1rem;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .requirement-label {
+            color: var(--primary-color);
+            font-weight: bold;
+            min-width: 100px;
+        }
+
+        .requirement-text {
+            color: #666;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .email-title {
+            color: #444;
+            margin-bottom: 0.5rem;
+        }
+
+        .email-link {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .email-link:hover {
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .requirement-item {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            
+            .requirement-label {
+                min-width: auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -286,6 +362,39 @@
                 <div class="direction-item">智能医学信息处理</div>
                 <div class="direction-item">人工智能基础理论研究 可解释人工智能</div>
                 <div class="direction-item">智能图形学、空间感知与空间智能</div>
+            </div>
+        </div>
+
+        <div class="join-section">
+            <h2 class="section-title">投递简历</h2>
+            <div class="resume-submission">
+                <p class="submission-intro">
+                    如果您对我们的研究方向感兴趣，欢迎投递简历。请在邮件中注明：
+                </p>
+                <div class="requirements-list">
+                    <div class="requirement-item">
+                        <span class="requirement-label">1. 申请类型</span>
+                        <span class="requirement-text">（博士/硕士/博士后）</span>
+                    </div>
+                    <div class="requirement-item">
+                        <span class="requirement-label">2. 个人简历</span>
+                        <span class="requirement-text">（包含教育背景、研究经历、发表论文等）</span>
+                    </div>
+                    <div class="requirement-item">
+                        <span class="requirement-label">3. 成绩单</span>
+                        <span class="requirement-text">（本科及以上阶段）</span>
+                    </div>
+                    <div class="requirement-item">
+                        <span class="requirement-label">4. 英语成绩</span>
+                        <span class="requirement-text">（四六级/雅思/托福等）</span>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <p class="email-title">请将申请材料发送至：</p>
+                    <a href="mailto:mqwei@nuaa.edu.cn" class="email-link">
+                        mqwei@nuaa.edu.cn
+                    </a>
+                </div>
             </div>
         </div>
     </div>
