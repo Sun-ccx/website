@@ -111,6 +111,73 @@
             font-size: 0.9rem;
         }
 
+        .profile-info p {
+            line-height: 1.6;
+            color: #444;
+            margin-bottom: 1rem;
+        }
+
+        /* 添加轮播图样式 */
+        .photo-carousel {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            background: white;
+        }
+
         .section {
             background: white;
             border-radius: 12px;
@@ -220,8 +287,45 @@
                 <div class="info-section">
                     <h3>联系方式</h3>
                     <p>所在单位：太原理工大学人工智能学院</p>
-                    <p>办公室：人工智能学院楼409</p>
-                    <p>Email：weimingqiang@tyut.edu.cn / mingqiang.wei@gmail.com / mqwei@nuaa.edu.cn</p>
+                    <p>办公室：计算机学院实验楼106A</p>
+                    <p>Email：mqwei@nuaa.edu.cn / mingqiang.wei@gmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 添加照片轮播 -->
+        <div class="photo-carousel">
+            <div class="carousel-slide active" style="background-image: url('images/research1.jpg')">
+                <div class="carousel-caption">深度学习与计算机视觉研究</div>
+            </div>
+            <div class="carousel-slide" style="background-image: url('images/research2.jpg')">
+                <div class="carousel-caption">3D视觉与几何处理</div>
+            </div>
+            <div class="carousel-slide" style="background-image: url('images/research3.jpg')">
+                <div class="carousel-caption">团队研究成果展示</div>
+            </div>
+            <div class="carousel-nav">
+                <div class="carousel-dot active"></div>
+                <div class="carousel-dot"></div>
+                <div class="carousel-dot"></div>
+            </div>
+        </div>
+
+        <!-- 新增新闻栏目 -->
+        <div class="section">
+            <div class="section-title">
+                最新新闻
+                <a href="news.html" class="view-more">查看更多</a>
+            </div>
+            <div class="preview-list">
+                <div class="preview-item">
+                    <span class="highlight">2023年10月</span>：魏明强教授团队在计算机视觉顶级会议CVPR 2023上发表最新研究成果。
+                </div>
+                <div class="preview-item">
+                    <span class="highlight">2023年9月</span>：魏明强教授受邀参加国际人工智能大会并作主题报告。
+                </div>
+                <div class="preview-item">
+                    <span class="highlight">2023年8月</span>：魏明强教授团队获得国家自然科学基金重点项目资助。
                 </div>
             </div>
         </div>
